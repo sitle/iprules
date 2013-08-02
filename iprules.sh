@@ -43,7 +43,7 @@ function add {
   [ ! -z $PROVIDER ] && echo "La team $1 est déjà affecté à $PROVIDER" && exit 1
   PROVIDER=$2
 
-  # on verifie que la règle à effacer est bien dans la liste
+  # on ajoute la nouvelle regle
   ip rule add from $NETWORK table $PROVIDER
   echo "Adding $1 to $PROVIDER"
   list
